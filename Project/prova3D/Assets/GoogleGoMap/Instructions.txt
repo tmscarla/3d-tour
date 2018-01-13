@@ -1,0 +1,50 @@
+Google Go Maps
+---------------------------
+
+Google Go Maps uses Google static maps API to query maps and "map" them to unity world.
+This asset makes it easy to convert map positions to unity world positions and vice versa.
+
+Support: tavakkol.sasan@gmail.com
+
+
+Drawing a map in Unity
+---------------------------
+1 - Assign GoogleStaticMap.cs to a quad (can be other types of object)
+2 - Assign the map material from the GoogleGoMap/materials folder to the object.
+
+3 - From a separate script and the from GoogleStaticMap component of the quad, call:
+	a) call initialize()
+	b) Set the centerMercator (i.e. center of the map) to tileCenterMercator (GeoPoint(lat,lon));
+	c) call DrawMap(). 
+
+
+In addition to drawing a map, Google Go Maps, helps you to track a character and load the map accordingly
+The best way to learn how to use this feature is loading the example scene. 
+While running on a mobile device, the GPS location of the user will be used to load the map,
+While running on the editor, a hardcoded lat/lon location in Los Angeles, CA is used. 
+
+In the demo scene, I implemented a tiled mapping system which lets the player to
+move on the map. A few cubic objects are also positioned on the map to help you understand how
+you can put objects on the map according to their (lat,lon).
+
+There are several options to customize the Google map. Note that some options may not work,
+as there might be on going issues with Google’s static maps. For example, as the time of writing
+this guide, the road strokes does not work properly. 
+
+—————————————————-
+Quick guide about the example scene:
+The game is managed by the GameManger.cs script attached to an object with the same name.
+This script is Singleton, so you can access it from anywhere. 
+In this script, we first start the location services for the player (if available) and wait
+for a response. If the service is available, the GPS location of the phone will be used. If 
+not, a hardcoded value is passed along. The map is initialized. Then it’s center is set.
+To best understand the codes, you need to know how Web Mercator mapping work. But you can 
+also learn by reading the example carefully. In short, Web Mercator is a function with 
+maps the earth surface a map as seen in Google map, or most of other web map services. There
+is one-to-one correspondence between (lat, lon) on the earth surface and (x,y) in the Web Mercator
+system. There are functions provided for you to do this conversion, so you don’t need to worry!
+
+There are two quads name map-1 and map-2. These quads alternatively load the map and show it while
+the character (the capsule) moves.
+
+Feel free to reach me at tavakkol.sasan@gmail.com with further questions. 
