@@ -36,7 +36,7 @@ The relevance of the place is predetermined according to number of checkins **nc
 | nc > 100.000          |     5     |
 
 <p align="center">
-<a href="https://www.codecogs.com/eqnedit.php?latex=scaleFactor&space;=&space;\alpha&space;*&space;c&space;&plus;&space;(1-\alpha&space;)*r" target="_blank"><img src="https://latex.codecogs.com/gif.latex?scaleFactor&space;=&space;\alpha&space;*&space;c&space;&plus;&space;(1-\alpha&space;)*r" title="scaleFactor = \alpha * c + (1-\alpha )*r" /></a>
+<a href="https://www.codecogs.com/eqnedit.php?latex=scaleFactor&space;=&space;\alpha&space;*&space;c&space;&plus;&space;(1-\alpha&space;)*r" target="_blank"><img height="30" src="https://latex.codecogs.com/gif.latex?scaleFactor&space;=&space;\alpha&space;*&space;c&space;&plus;&space;(1-\alpha&space;)*r" title="scaleFactor = \alpha * c + (1-\alpha )*r" /></a>
 </p>
 
 
@@ -60,7 +60,6 @@ For displaying the map on the ground with satellites images it was used the asse
 * Places requests handled with priority for visible categories.
 
 ## Orientation
-<img height="250" align="right" src="https://github.com/tmscarla/FacebookPlaces3DTour/blob/master/Images/right.png">
 
 * **Compass:** to specific user orientation in the real world.
 * **Current Position:** latitude and longitude.
