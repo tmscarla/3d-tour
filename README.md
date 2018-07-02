@@ -3,7 +3,7 @@
   <img height="120" src="https://github.com/tmscarla/FacebookPlaces3DTour/blob/master/Images/unitylogo.png">
 </p>
 
-# FacebookPlaces3DTour
+# 3D-Tour
 Web app for a 3D tour in Unity through Facebook Places using GPS.
 
 # Overview
